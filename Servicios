@@ -1,0 +1,26 @@
+#fichero con los respectivos servicios
+.data
+	.eqv READ_INT 5
+	.eqv EXIT 10
+	.eqv DISP_R 0xFFFF0010
+	.eqv DISP_L 0xFFFF0011
+	.eqv KEY_F 0xFFFF0012# lectura de fila
+	.eqv KEY_T 0xFFFF0014#lectura de tecla
+	.eqv PRINT_INT 1
+	.eqv PRINT_STR 4
+	.eqv READ_CHAR 12
+	.eqv PRINT_CHAR A
+	.eqv READ_STR 8
+	.eqv MAX 1024
+	.eqv DIG_0 0x3F
+	.eqv DIG_1 0x60
+	.eqv DIG_2 0xED
+	.eqv DIG_3 0x79
+	.eqv DIG_4 0x33
+	.eqv DIG_5 0x5B
+	.eqv DIG_6 0xBF
+	.eqv DIG_7 0x07
+	.eqv DIG_8 0xFF
+	.eqv DIG_9 0x73
+	.eqv DIG_7 0x07
+	.eqv DIG_8 0x4F
