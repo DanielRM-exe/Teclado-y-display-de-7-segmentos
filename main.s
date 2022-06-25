@@ -12,7 +12,8 @@
 	
 	li t0, BASE
 
-bucle:		
+bucle:	
+	li x6,68
 	li t3,17
 	li t4,33
 	li t5,65
@@ -22,10 +23,14 @@ bucle:
 	sb t1, KEY_ENA(t0)
 	lb t2, KEY_RD(t0)
 	
+	li t1,68
+	
+	beq t2, t1 ,EXIT_P
 	beq t2, t3,DISP_0
 	beq t2, t4,DISP_1
 	beq t2, t5,DISP_2
 	beq t2, t6,DISP_3
+	
 	
 	li t3,18
 	li t4,34
@@ -36,10 +41,12 @@ bucle:
 	sb t1, KEY_ENA(t0)
 	lb t2, KEY_RD(t0)
 	
+	li t1,68
 	beq t2, t3,DISP_4
 	beq t2, t4,DISP_5
 	beq t2, t5,DISP_6
 	beq t2, t6,DISP_7
+	beq t2, t1 ,EXIT_P
 	
 	li t3,20
 	li t4,36
@@ -49,8 +56,10 @@ bucle:
 	sb t1, KEY_ENA(t0)
 	lb t2, KEY_RD(t0)
 	
+	li t1,68
 	beq t2, t3,DISP_8
 	beq t2, t4,DISP_9
+	beq t2, t1 ,EXIT_P
 	
 	
 	
@@ -120,6 +129,10 @@ DISP_9:
 	li t3,DIG_9
 	sb t3,DISP_R(t0)
 	beq t3,t3,bucle
+
+EXIT_P:
+	li a7, EXIT
+	ecall
 
 
 	
